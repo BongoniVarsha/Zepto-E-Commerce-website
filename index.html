@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zepto: 10-Min Groceries Delivery</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <script src="script.js" defer></script> <!-- Link to the JS file -->
+</head>
+<body>
+    <nav>
+        <div><a href="#">Zepto</a></div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3>Shop the Best Groceries</h3>
+
+        <!-- Total Amount Display -->
+        <h4 id="total-amount">Total Amount: Rs.0</h4>
+
+        <!-- Product Rows -->
+        <div class="product-row">
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-1000-1000,pr-true,f-auto,q-80/cms/product_variant/d07172b4-8a58-4d17-ab16-61a47970f394.jpeg" alt="Hazelnut Chocolate Ice Cream">
+                <div class="product-title">Kwality Wall's Hazelnut Chocolate Ice Cream Tub 500ml</div>
+                <div class="product-price">Rs.250</div>
+                <button class="add-to-cart" onclick="addToCart('Hazelnut Chocolate Ice Cream', 250)">Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-1021-1021,pr-true,f-auto,q-80/cms/product_variant/b4a5c4e8-4f82-4c67-ad27-d0beb60786d8.jpeg" alt="Choco Brownie Fudge">
+                <div class="product-title">Kwality Wall's Choco Brownie Fudge Tub 700ml</div>
+                <div class="product-price">Rs.240</div>
+                <button class="add-to-cart" onclick="addToCart('Choco Brownie Fudge', 240)">Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-1000-1000,pr-true,f-auto,q-80/cms/product_variant/eda17d82-672f-4185-a233-faf416ae470d.jpeg" alt="Dairy Day Vanilla Ice Cream">
+                <div class="product-title">Dairy Day Vanilla Ice Cream Tub 500ml</div>
+                <div class="product-price">Rs.125</div>
+                <button class="add-to-cart" onclick="addToCart('Dairy Day Vanilla Ice Cream', 125)">Add to cart</button>
+            </div>
+        </div>
+
+        <!-- Additional product rows -->
+        <div class="product-row">
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-1021-1021,pr-true,f-auto,q-80/cms/product_variant/906243ee-902f-4964-9b8f-0b34f8ddc956.jpeg" alt="Kwality Walls">
+                <div class="product-title">Kwality Wall's Oreo And Cream Tub 700ml</div>
+                <div class="product-price">Rs.249</div>
+                <button class="add-to-cart" onclick="addToCart('Kwality Wall\'s Oreo And Cream', 249)">Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-600,ar-1021-1021,pr-true,f-auto,q-80/cms/product_variant/fb60f02d-d1e1-4457-9f4e-3c1d61645b53.jpeg" alt="Kwality Walls">
+                <div class="product-title">Kwality Wall's Alphonso Mango Tub 700ml</div>
+                <div class="product-price">Rs.155</div>
+                <button class="add-to-cart" onclick="addToCart('Kwality Wall\'s Alphonso Mango', 155)">Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-600,ar-1000-1000,pr-true,f-auto,q-80/cms/product_variant/bd359ed7-cb24-49a8-a243-6283544fdd51.jpeg" alt="Kwality Walls">
+                <div class="product-title">Kwality Wall's Crunchilicious Butterscotch Tub 700ml</div>
+                <div class="product-price">Rs.144</div>
+                <button class="add-to-cart" onclick="addToCart('Kwality Wall\'s Crunchilicious Butterscotch', 144)">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="product-row">
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-416-383,pr-true,f-auto,q-80/inventory/product/388e3e52-65af-47c2-be87-48d5067d0f54-af5ae935-43c7-4449-b9e0-35011ddd78a5.jpeg" alt="Custard Apple">
+                <div class="product-title">Custard Apple 2 pcs(350g - 500g)</div>
+                <div class="product-price">Rs.87 </div>
+                <button class="add-to-cart" onclick="addToCart('Custard Apple', 87)">Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/de3f95cd-12ca-4b38-8c74-20bd75f265cc.jpg" alt="Guava">
+                <div class="product-title">Guava(Amrood) 500g </div>
+                <div class="product-price">Rs.57</div>
+                <button class="add-to-cart" onclick="addToCart('Guava', 57)">Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.zeptonow.com/production///tr:w-400,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/38ae1317-3262-4fd2-82c5-f931efe910da.jpeg" alt="Tender Coconut">
+                <div class="product-title">Tender Coconut 1 pc(200 - 250 ml) </div>
+                <div class="product-price">Rs.73</div>
+                <button class="add-to-cart" onclick="addToCart('Tender Coconut', 73)">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Zepto. All rights reserved.</p>
+    </footer>
+</body>
+</html>
